@@ -5,7 +5,7 @@ on:
     types: [deploy-service]
 
 jobs:
-  hello_world_job:
+  update_file:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
@@ -17,7 +17,7 @@ jobs:
         with:
           who-to-greet: "Mona the Tony"
   publish_changes:
-    needs: setup
+    needs: update_file
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
