@@ -9687,6 +9687,7 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(8583);
 const github = __nccwpck_require__(7139);
 var fs = __nccwpck_require__(7147);
+const path = __nccwpck_require__(1017)
 // function readWriteAsync(filepath) {
 //   fs.readFile(filepath, 'utf-8', function (err, data) {
 //     if (err) throw err;

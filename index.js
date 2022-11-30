@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 var fs = require('fs');
+const path = require('path')
 // function readWriteAsync(filepath) {
 //   fs.readFile(filepath, 'utf-8', function (err, data) {
 //     if (err) throw err;
