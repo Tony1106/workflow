@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        env:
+          PROPERTY_ID: ${{ github.context.payload.client_payload.propertyId }}
       - run: auto/bash
 
       - uses: actions/checkout@v3
