@@ -21,6 +21,7 @@ export const SUPPRESSED_PROPERTY_IDS = [
   "3553907",
   "9622209",
   // Your custom aliases here - do not delete
+    "1122asd1",
 ];
 
 export const isPropertySuppressed = (propertyId: string): boolean => SUPPRESSED_PROPERTY_IDS.includes(propertyId);
