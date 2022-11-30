@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: Tony1106/workflow@v1.1
+        uses: Tony1106/workflow
         with:
           who-to-greet: "Mona the Tony"
       # Use the output from the `hello` step
