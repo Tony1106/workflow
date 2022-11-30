@@ -1,0 +1,3 @@
+!/bin/sh
+
+node dist/index.js "output=suppress.tsx" "propertyId=1122asd1"
