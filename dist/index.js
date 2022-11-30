@@ -9686,13 +9686,35 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(8583);
 const github = __nccwpck_require__(7139);
+var fs = __nccwpck_require__(7147);
+// function readWriteAsync(filepath) {
+//   fs.readFile(filepath, 'utf-8', function (err, data) {
+//     if (err) throw err;
+
+//     var newValue = data.replace(/^\./gim, 'myString');
+
+//     fs.writeFile(filepath, newValue, 'utf-8', function (err) {
+//       if (err) throw err;
+//       console.log('filelistAsync complete');
+//     });
+//   });
+// }
+
+function readWriteSync(filepath) {
+  var data = fs.readFileSync(filepath, 'utf-8');
+
+  var newValue = data.replace(/^\./gim, 'myString');
+
+  fs.writeFileSync(filepath, 'test', 'utf-8');
+
+  console.log('readFileSync complete');
+}
+
 
 try {
   // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}!`);
-  const time = (new Date()).toTimeString();
-  core.setOutput("time", time);
+  // readWriteAsync();
+  readWriteSync('./suppress.tsx');
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
