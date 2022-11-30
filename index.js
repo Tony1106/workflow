@@ -20,7 +20,7 @@ function readWriteSync(filepath) {
 
   var newValue = data.replace(/^\./gim, 'myString');
 
-  fs.writeFileSync(filepath, 'test', 'utf-8');
+  fs.writeFileSync(filepath, 'test222', 'utf-8');
 
   console.log('readFileSync complete');
 }

@@ -20,6 +20,6 @@ export const SUPPRESSED_PROPERTY_IDS = [
   "10503879",
   "3553907",
   "9622209",
-];
+ $propertyId];
 
 export const isPropertySuppressed = (propertyId: string): boolean => SUPPRESSED_PROPERTY_IDS.includes(propertyId);
