@@ -7,8 +7,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: create file
-        run: touch hello.md
       - name: Hello world action step
         id: hello
         uses: Tony1106/workflow@v1.5
@@ -17,6 +15,7 @@ jobs:
       # Use the output from the `hello` step
       - uses: actions/checkout@v3
       - run: |
+          touch hello.md
           git config --global user.name "tony bui"
           git config --global user.email "buiminhtien06@gmail.com"
           git add .
