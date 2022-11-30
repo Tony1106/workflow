@@ -1,4 +1,8 @@
-on: [push]
+on:
+  # The event respository_dispatch means on every API trigger,
+  # this whole file gets executed
+  repository_dispatch:
+    types: [deploy-service]
 
 jobs:
   hello_world_job:
@@ -9,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Hello world action step
         id: hello
-        uses: Tony1106/workflow@v1.5
+        uses: Tony1106/workflow@test
         with:
           who-to-greet: "Mona the Tony"
       # Use the output from the `hello` step
