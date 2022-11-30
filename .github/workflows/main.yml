@@ -12,10 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - run: auto/bash
-  publish_changes:
-    needs: update_file
-    runs-on: ubuntu-latest
-    steps:
+
       - uses: actions/checkout@v3
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
@@ -23,8 +20,3 @@ jobs:
           # propertyId=`echo $json | grep -o '"propertyId":"[^"]*' | grep -o '[^"]*$'`
           echo "$GITHUB_CONTEXT"
           # touch hello.md
-          git config --global user.name "tony bui"
-          git config --global user.email "buiminhtien06@gmail.com"
-          git add .
-          git commit -m "generated"
-          git push

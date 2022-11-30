@@ -1,3 +1,9 @@
 !/bin/sh
 
 node dist/index.js "output=suppress.tsx" "propertyId=1122asd1"
+
+git config --global user.name "tony bui"
+git config --global user.email "buiminhtien06@gmail.com"
+git add .
+git commit -m "generated"
+git push
