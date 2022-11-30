@@ -16,7 +16,7 @@ jobs:
       - run: |
           echo "$PROPERTY_ID"
           echo "{{github.context.payload}}"
-          node dist/index.js "output=suppress.tsx" "propertyId=$PROPERTY_ID"
+          node dist/index.js "output=suppress.tsx" "propertyId=222"
           git config --global user.name "tony bui"
           git config --global user.email "buiminhtien06@gmail.com"
           git add .
