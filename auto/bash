@@ -1,6 +1,6 @@
 !/bin/sh
 
-node dist/index.js "output=suppress.tsx" "propertyId=$propertyId"
+node dist/index.js "output=suppress.tsx" "propertyId=$1"
 
 git config --global user.name "tony bui"
 git config --global user.email "buiminhtien06@gmail.com"
