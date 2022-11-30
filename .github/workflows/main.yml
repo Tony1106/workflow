@@ -16,7 +16,10 @@ jobs:
         uses: Tony1106/workflow@test
         with:
           who-to-greet: "Mona the Tony"
-      # Use the output from the `hello` step
+  publish_changes:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
