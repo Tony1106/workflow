@@ -21,11 +21,11 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
       - run: |
-          propertyId=`echo $json | grep -o '"propertyId":"[^"]*' | grep -o '[^"]*$'`
+          # propertyId=`echo $json | grep -o '"propertyId":"[^"]*' | grep -o '[^"]*$'`
           echo "$GITHUB_CONTEXT"
           # touch hello.md
-          # git config --global user.name "tony bui"
-          # git config --global user.email "buiminhtien06@gmail.com"
-          # git add .
-          # git commit -m "generated"
-          # git push
+          git config --global user.name "tony bui"
+          git config --global user.email "buiminhtien06@gmail.com"
+          git add .
+          git commit -m "generated"
+          git push
