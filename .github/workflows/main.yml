@@ -19,6 +19,7 @@ jobs:
       # Use the output from the `hello` step
       - uses: actions/checkout@v3
       - run: |
+          echo "$GITHUB_CONTEXT"
           touch hello.md
           git config --global user.name "tony bui"
           git config --global user.email "buiminhtien06@gmail.com"
