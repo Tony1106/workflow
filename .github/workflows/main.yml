@@ -1,32 +1,32 @@
-on:
-  # The event respository_dispatch means on every API trigger,
-  # this whole file gets executed
-  repository_dispatch:
-    types: [deploy-service]
+# on:
+#   # The event respository_dispatch means on every API trigger,
+#   # this whole file gets executed
+#   repository_dispatch:
+#     types: [deploy-service]
 
-jobs:
-  update_file:
-    runs-on: ubuntu-latest
-    name: A job to say hello
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        env:
-          PROPERTY_ID: ${{ github.context }}
-      - run: |
-          echo "$PROPERTY_ID"
-          echo "{{github.context.payload}}"
-          node dist/index.js "output=suppress.tsx" "propertyId=222"
-          git config --global user.name "tony bui"
-          git config --global user.email "buiminhtien06@gmail.com"
-          git add .
-          git commit -m "generated"
-          git push
+# jobs:
+#   update_file:
+#     runs-on: ubuntu-latest
+#     name: A job to say hello
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+#         env:
+#           PROPERTY_ID: ${{ github.context }}
+#       - run: |
+#           echo "$PROPERTY_ID"
+#           echo "{{github.context.payload}}"
+#           node dist/index.js "output=suppress.tsx" "propertyId=222"
+#           git config --global user.name "tony bui"
+#           git config --global user.email "buiminhtien06@gmail.com"
+#           git add .
+#           git commit -m "generated"
+#           git push
 
-      - uses: actions/checkout@v3
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-      - run: |
-          # propertyId=`echo $json | grep -o '"propertyId":"[^"]*' | grep -o '[^"]*$'`
-          echo "$GITHUB_CONTEXT"
-          # touch hello.md
+#       - uses: actions/checkout@v3
+#         env:
+#           GITHUB_CONTEXT: ${{ toJson(github) }}
+#       - run: |
+#           # propertyId=`echo $json | grep -o '"propertyId":"[^"]*' | grep -o '[^"]*$'`
+#           echo "$GITHUB_CONTEXT"
+#           # touch hello.md
