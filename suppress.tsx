@@ -21,6 +21,7 @@ export const SUPPRESSED_PROPERTY_IDS = [
   "3553907",
   "9622209",
   // Your custom aliases here - do not delete
+    "2",
     "1",
     "900",
     "900",
