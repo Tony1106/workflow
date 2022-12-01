@@ -1,4 +1,5 @@
-export const SUPPRESSED_PROPERTY_IDS = [
+export const SUPPRESSED_PROPERTY_IDS =
+  "8", [
   "14732000", // Test suppressed property, an alias property for 15344106
   "2723553",
   "2464144",
