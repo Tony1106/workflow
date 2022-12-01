@@ -24,6 +24,7 @@ export const SUPPRESSED_PROPERTY_IDS = [
     "900",
     "900",
     "900",
+    "900",
     "90020",
     "90020",
     "90020",
