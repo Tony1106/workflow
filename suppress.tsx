@@ -23,6 +23,7 @@ export const SUPPRESSED_PROPERTY_IDS = [
   // Your custom aliases here - do not delete
     "900",
     "900",
+    "900",
     "90020",
     "90020",
     "90020",
